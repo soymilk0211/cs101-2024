@@ -11,14 +11,6 @@ Code, Compile, Run and Debug online from anywhere in world.
 #include <fstream>
 using namespace std;
 
-class myString {
-    private:
-        string m_str;
-    public:
-        myString(string s) {
-            m_str = s;
-        }
-};
 
 class ReadClass
 {
@@ -27,14 +19,11 @@ class ReadClass
         string filename="main.cpp";
     
     public:
-        ReadClass(){}
         void showClass(){
             ifstream in;
             string line;
             in.open(filename);
-            if(in.fail()){
-                cout<<"Error opening a file"<<endl;
-            }
+
             while(getline(in, line)){
                 if(line[0]=='c'){
                     amount+=1;
